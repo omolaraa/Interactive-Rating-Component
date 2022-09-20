@@ -2,7 +2,7 @@ const { src, dest, watch, series } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
-const terser = require('gulp-terser');
+// const terser = require('gulp-terser');
 // const imagemin = require('gulp-imagemin');
 // const concat = require('gulp-concat');
 // const uglify = require('gulp-uglify');
@@ -21,7 +21,7 @@ function scssTask(){
 //Javascript task
 function jsTask(){
   return src('src/js/*.js', { sourcemaps: true})
-  .pipe(terser())
+  // .pipe(terser())
   .pipe(dest('dist/js', {sourcemaps: '.'}));
 }
 
